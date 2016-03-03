@@ -18,4 +18,9 @@
 		<platform name="android">
 			<preference name="orientation" value="portrait" />
 		</platform>
+		<preference name="phonegap-version" value="3.6.3" />
+		<preference name="orientation" value="default" />
+		<preference name="target-device" value="universal" />
+		<preference name="fullscreen" value="false" />
+		<preference name="webviewbounce" value="false" />
 	</widget>
