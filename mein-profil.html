@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Medserv</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/font-awesome/font-awesome.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/page.css" rel="stylesheet">
+	<link href="css/responsive-calendar.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+		<a class="navmenu-brand" href="#">
+			<table>
+				<tr>
+					<td>
+						<span class="avatar-ph"></span>
+					</td>
+					<td>
+						<div class="avatar-name">Philipp
+							<br> Scherb</div>
+					</td>
+				</tr>
+			</table>
+		</a>
+		<ul class="nav navmenu-nav">
+			<li><a href="mein-profil.html">Mein profil</a></li>
+			<li class="divider"></li>
+			<li><a href="termine.html">Termine</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Meine arzte</a></li>
+			<li class="divider"></li>
+			<li><a href="#">NACHRICHTEN</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Befunde</a></li>
+			<li class="divider"></li>
+			<li><a href="#">Einstellungen</a></li>
+		</ul>
+	</div>
+
+	<div class="navbar navbar-default navbar-fixed-top">
+		<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<span class="window-title text-center">Mein profil</span>
+		<button class="sign-up pull-right" onclick="window.open('ntermin.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<div class="avatar-ph-mid"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<h3>Phillip Scherb<br>(9384738765373)</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<h4>40, male</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<span class="glyphicon glyphicon-phone pull-left" aria-hidden="true">	&#43;49 015xx-xxxxxxx</span>
+					</div>
+					<div class="col-xs-12">
+						<span class="glyphicon glyphicon-envelope pull-left" aria-hidden="true">	phillip.scherb@mail.com</span>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<!-- /.container -->
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jasny-bootstrap.min.js"></script>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/npm.js"></script>
+	<script src="js/responsive-calendar.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".responsive-calendar").responsiveCalendar({
+				time: '2016-03',
+				events: {
+					"2013-04-30": {
+						"number": 5,
+						"url": "http://w3widgets.com/responsive-slider"
+					},
+					"2013-04-26": {
+						"number": 1,
+						"url": "http://w3widgets.com"
+					},
+					"2013-05-03": {
+						"number": 1
+					},
+					"2013-06-12": {}
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
