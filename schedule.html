@@ -30,57 +30,60 @@
 <body>
 
 
-	<div class="navbar navbar-default navbar-fixed-top">
-		<span class="window-title text-center">Schedule</span>
-		<button class="sign-up pull-right" onclick="window.open('ntermin.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<div class="navbar navbar-default navbar-fixed-top">
+					<h1 class="window-title text-center">SCHEDULE</h1>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="notification-wrapper">
-					<div class="container-fluid">
-						<div class="row bs-wizard" style="border-bottom:0;">
-							<div class="col-xs-3 bs-wizard-step complete">
-								<div class="text-center bs-wizard-stepnum">Step 1</div>
-								<div class="progress">
-									<div class="progress-bar"></div>
-								</div>
-								<a href="#" class="bs-wizard-dot"></a>
-								<div class="bs-wizard-info text-center">HAUSARZT</div>
+				<div class="container-fluid">
+					<div class="row bs-wizard" style="border-bottom:0;">
+						<div class="col-xs-3 bs-wizard-step complete">
+							<div class="text-center bs-wizard-stepnum">Step 1</div>
+							<div class="progress">
+								<div class="progress-bar"></div>
 							</div>
-
-							<div class="col-xs-3 bs-wizard-step complete">
-								<!-- complete -->
-								<div class="text-center bs-wizard-stepnum">BEHANDLUNG</div>
-								<div class="progress">
-									<div class="progress-bar"></div>
-								</div>
-								<a href="#" class="bs-wizard-dot"></a>
-								<div class="bs-wizard-info text-center">Migräne</div>
-							</div>
-
-							<div class="col-xs-3 bs-wizard-step active">
-								<!-- complete -->
-								<div class="text-center bs-wizard-stepnum">Date</div>
-								<div class="progress">
-									<div class="progress-bar"></div>
-								</div>
-								<a href="#" class="bs-wizard-dot"></a>
-								<div class="bs-wizard-info text-center">21 FEB</div>
-							</div>
-
-							<div class="col-xs-3 bs-wizard-step disabled">
-								<!-- active -->
-								<div class="text-center bs-wizard-stepnum">-</div>
-								<div class="progress">
-									<div class="progress-bar"></div>
-								</div>
-								<a href="#" class="bs-wizard-dot"></a>
-								<div class="bs-wizard-info text-center">-</div>
-							</div>
-
+							<a href="#" class="bs-wizard-dot"></a>
+							<div class="bs-wizard-info text-center">HAUSARZT</div>
 						</div>
+
+						<div class="col-xs-3 bs-wizard-step complete">
+							<!-- complete -->
+							<div class="text-center bs-wizard-stepnum">BEHANDLUNG</div>
+							<div class="progress">
+								<div class="progress-bar"></div>
+							</div>
+							<a href="#" class="bs-wizard-dot"></a>
+							<div class="bs-wizard-info text-center">Migräne</div>
+						</div>
+
+						<div class="col-xs-3 bs-wizard-step active">
+							<!-- complete -->
+							<div class="text-center bs-wizard-stepnum">Date</div>
+							<div class="progress">
+								<div class="progress-bar"></div>
+							</div>
+							<a href="#" class="bs-wizard-dot"></a>
+							<div class="bs-wizard-info text-center">21 FEB</div>
+						</div>
+
+						<div class="col-xs-3 bs-wizard-step disabled">
+							<!-- active -->
+							<div class="text-center bs-wizard-stepnum">-</div>
+							<div class="progress">
+								<div class="progress-bar"></div>
+							</div>
+							<a href="#" class="bs-wizard-dot"></a>
+							<div class="bs-wizard-info text-center">-</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -189,42 +192,42 @@
 
 			</div>
 		</div>
-		</div>
+	</div>
 
 
 
-		<!-- Bootstrap core JavaScript
+	<!-- Bootstrap core JavaScript
     ================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script>
-			window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
-		</script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jasny-bootstrap.min.js"></script>
-		<script src="js/html5shiv.min.js"></script>
-		<script src="js/responsive-calendar.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function () {
-				$(".responsive-calendar").responsiveCalendar({
-					time: '2016-03',
-					events: {
-						"2013-04-30": {
-							"number": 5,
-							"url": "http://w3widgets.com/responsive-slider"
-						},
-						"2013-04-26": {
-							"number": 1,
-							"url": "http://w3widgets.com"
-						},
-						"2013-05-03": {
-							"number": 1
-						},
-						"2013-06-12": {}
-					}
-				});
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jasny-bootstrap.min.js"></script>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/responsive-calendar.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".responsive-calendar").responsiveCalendar({
+				time: '2016-03',
+				events: {
+					"2013-04-30": {
+						"number": 5,
+						"url": "http://w3widgets.com/responsive-slider"
+					},
+					"2013-04-26": {
+						"number": 1,
+						"url": "http://w3widgets.com"
+					},
+					"2013-05-03": {
+						"number": 1
+					},
+					"2013-06-12": {}
+				}
 			});
-		</script>
+		});
+	</script>
 </body>
 
 </html>

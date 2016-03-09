@@ -28,6 +28,7 @@
 </head>
 
 <body>
+
 	<div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
 		<a class="navmenu-brand" href="#">
 			<table>
@@ -56,17 +57,21 @@
 			<li><a href="#">Einstellungen</a></li>
 		</ul>
 	</div>
-
-	<div class="navbar navbar-default navbar-fixed-top">
-		<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<span class="window-title text-center">Success</span>
-		<button class="sign-up pull-right" onclick="window.open('ntermin.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<div class="navbar navbar-default navbar-fixed-top">
+					<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h1 class="window-title text-center">Success</h1>
+				</div>
+			</div>
+		</div>
 	</div>
+
 
 	<div class="container-fluid">
 		<div class="row">
@@ -120,19 +125,16 @@
 					<div class="col-xs-12 text-center">
 						<h1 class="success-title">Herzlichen Glückwunsch</h1>
 					</div>
-				</div>
-				<div class="row">
 					<div class="col-xs-12 text-center">
-						<h2>Ihr Termin wurde erfolgreich übermittelt</h2>
+						<p>Ihr Termin wurde erfolgreich übermittelt</p>
 					</div>
-				</div>
-				<div class="row">
 					<div class="col-xs-12 text-center">
-						<img src="img/succes.png" alt="Success" class="success-img"/>
+						<img src="img/succes.png" alt="Success" class="success-img" />
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	</div>
@@ -149,28 +151,6 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jasny-bootstrap.min.js"></script>
 	<script src="js/html5shiv.min.js"></script>
-	<script src="js/responsive-calendar.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$(".responsive-calendar").responsiveCalendar({
-				time: '2016-03',
-				events: {
-					"2013-04-30": {
-						"number": 5,
-						"url": "http://w3widgets.com/responsive-slider"
-					},
-					"2013-04-26": {
-						"number": 1,
-						"url": "http://w3widgets.com"
-					},
-					"2013-05-03": {
-						"number": 1
-					},
-					"2013-06-12": {}
-				}
-			});
-		});
-	</script>
 </body>
 
 </html>

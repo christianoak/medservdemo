@@ -28,8 +28,10 @@ a:hover {
 .navbar,
 .navbar-default,
 .navbar-fixed-top {
-	background: none;
+	background-color: #283437;
 	border: 0;
+	height: 50px;
+	line-height: 50px;
 }
 
 .navbar-toggle {
@@ -37,8 +39,8 @@ a:hover {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #424242;
-	border: 2px solid #424242;
+	background-color: #fff;
+	border: 2px solid #fff;
 	margin-bottom: 5px;
 	width: 30px;
 }
@@ -46,6 +48,9 @@ a:hover {
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
 	background: none;
+}
+.navmenu-default .navmenu-nav>li>a:hover, .navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover, .navmenu-default .navmenu-nav>li>a:focus, .navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus {
+	color: #fff;
 }
 
 .navmenu-brand {
@@ -97,10 +102,12 @@ a:hover {
 }
 
 .window-title {
-	color: #283437;
+	color: white;
+	display: inline;
 	font-family: "Helvetica", sans-serif;
-	font-size: 36px;
+	font-size: 27px;
 	font-style: italic;
+	line-height: 50px;
 }
 
 .sign-up,
@@ -276,7 +283,6 @@ input.cmn-toggle-round-flat + label::before {
 .notification-text {
 	display: block;
 	font-size: 12px;
-	height: 50px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -450,6 +456,9 @@ input.cmn-toggle-round-flat + label::before {
 	width: 100%;
 	height: 100%;
 }
+.modal-list {
+	margin-left: 20px;
+}
 
 .btn-primary {
 	background-color: #fc1c1c;
@@ -528,11 +537,150 @@ input.cmn-toggle-round-flat + label::before {
 	width: 75px;
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width: 480px) {
+	body {
+		font-size: 16px;
+	}
+	/* TOP BAR */
+	.navbar,
+	.navbar-default,
+	.navbar-fixed-top {
+		height: 25px;
+		line-height: 25px;
+	}
+	.window-title {
+		font-size: 20px;
+	}
+	/* MENU */
+	.nav>li>a {
+		font-size: 14px;
+	}
+	.nav>li>a:hover {
+		color: #fff;
+	}
+	/* END MENU */
 	.btn-choice {
-	font-size: 16px;
-}
+		font-size: 16px;
+	}
 	.btn-l {
-		font-size:16px;
+		font-size: 16px;
+	}
+	/* SIGN UP PAGE */
+	.form-control {
+		font-size: 16px;
+		margin: 20px auto;
+	}
+	#dropdownMenu1 {
+		font-size: 14px;
+		height: 40px;
+		width: 75%;
+	}
+	.newsletter-group label {
+		font-size: 16px;
+	}
+	#cmn-toggle-4 {
+		clear: both;
+		display: block;
+		margin: 0 auto;
+	}
+	input.cmn-toggle-round-flat + label {
+		height: 40px;
+		width: 80px;
+	}
+	.terms-group label {
+		font-size: 16px;
+	}
+	.switch > label {
+		display: block;
+		margin: 0 auto;
+	}
+	input.cmn-toggle-round-flat:checked + label::after {
+		margin-left: 20px
+	}
+	.btn-ghost {
+		font-size: 15px;
+		height: 50px;
+		margin-top: 5%;
+	}
+	/* NTERMIN PAGE */
+	.ntermin {
+		height: 10%;
+	}
+	.ntermin > table {
+		margin-top: 0px;
+		height: 10%;
+	}
+	.ntermint {
+		font-size: 14px;
+	}
+	.ntermin > h1 {
+		font-size: 20px;
+		margin-bottom: 20px;
+		padding-top: 10px;
+	}
+	.img-button {
+		margin-top: 40px;
+		width: 100px;
+	}
+	/* NTERMIN 2 */
+	.content-title {
+		font-size: 25px;
+		margin: 0;
+	}
+	.btn-choice {
+		font-size: 10px;
+		height: 40px;
+		line-height: 40px;
+	}
+	.btn-choice > img {
+		height: 35px;
+	}
+	/* NTERMIN 3 */
+	.btn-l {
+		font-size: 12px;
+		height: 40px;
+	}
+	.steps-container {
+		margin-top: 0px;
+	}
+	.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+		font-size: 12px;
+	}
+	.bs-wizard > .bs-wizard-step .bs-wizard-info {
+		font-size: 10px;
+	}
+	/* CALENDAR */
+	.responsive-calendar h4 {
+		font-size: 14px;
+	}
+	.responsive-calendar .day {
+		font-size: 12px !important;
+	}
+	.nav-btn {
+		margin-top: 5px;
+	}
+	.round-btn {
+		width: 40px;
+		height: 40px;
+	}
+	/* SCHEDULE */
+	.schedule-tab {
+		font-size: 12px;
+	}
+	/* SUMMARISCH */
+	.s-content {
+		margin-top: 30px;
+		margin-bottom: 50px;
+	}
+	/* SUCCESS */
+	.success-title {
+		font-size: 30px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	.success-img {
+		height: 100px;
+		margin-top: 0px;
 	}
 }

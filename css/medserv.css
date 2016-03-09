@@ -7,6 +7,7 @@ body {
 	font-size: 22px;
 	padding-top: 50px;
 	text-transform: uppercase;
+	height: 100vh;
 }
 
 .divider {
@@ -98,4 +99,12 @@ body {
 	color: #283437;
 	font-size: 36px;
 	font-style: italic;
+}
+
+@media only screen and (max-width: 480px) {
+	/* MENU */
+	
+	.nav>li>a {
+		font-size: 14px;
+	}
 }
