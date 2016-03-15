@@ -13,8 +13,6 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
 	<link href="css/font-awesome/font-awesome.css" rel="stylesheet">
@@ -22,7 +20,6 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="css/page.css" rel="stylesheet">
-	<link href="css/responsive-calendar.css" rel="stylesheet">
 
 
 </head>
@@ -57,19 +54,16 @@
 		</ul>
 	</div>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 text-center">
-				<div class="navbar navbar-default navbar-fixed-top">
-					<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<h1 class="window-title text-center">Mein profil</h1>
-				</div>
-			</div>
-		</div>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div class="pull-left icon-cont"><img src="img/logo.png" alt="Logo icon" class="logo-icon" /> </div>
+		<h1 class="window-title">MEIN PROFIL</h1>
+		<button class="home-btn pull-right" onclick="window.open('index.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
 	</div>
 	<div class="container-fluid">
 		<div class="row">
@@ -92,11 +86,15 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
-						<div class="glyphicon glyphicon-phone pull-left" aria-hidden="true"> &#43; 49 015xx-xxxxxxx</div>
+						<div class="glyphicon glyphicon-phone pull-left" aria-hidden="true"> 49 015xx-xxxxxxx</div>
 					</div>
 					<br>
 					<div class="col-xs-12">
 						<div class="glyphicon glyphicon-envelope pull-left" aria-hidden="true"> phillip.scherb@mail.com</div>
+					</div>
+					<br>
+					<div class="col-xs-12">
+						<div class="glyphicon glyphicon-map-marker pull-left" aria-hidden="true"> str. ETC, nr. 13, etc. etc.</div>
 					</div>
 				</div>
 			</div>
@@ -115,28 +113,6 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jasny-bootstrap.min.js"></script>
 	<script src="js/html5shiv.min.js"></script>
-	<script src="js/responsive-calendar.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$(".responsive-calendar").responsiveCalendar({
-				time: '2016-03',
-				events: {
-					"2013-04-30": {
-						"number": 5,
-						"url": "http://w3widgets.com/responsive-slider"
-					},
-					"2013-04-26": {
-						"number": 1,
-						"url": "http://w3widgets.com"
-					},
-					"2013-05-03": {
-						"number": 1
-					},
-					"2013-06-12": {}
-				}
-			});
-		});
-	</script>
 </body>
 
 </html>

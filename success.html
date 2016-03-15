@@ -13,8 +13,6 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
 	<link href="css/font-awesome/font-awesome.css" rel="stylesheet">
@@ -22,7 +20,6 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="css/page.css" rel="stylesheet">
-	<link href="css/responsive-calendar.css" rel="stylesheet">
 
 
 </head>
@@ -57,21 +54,18 @@
 			<li><a href="#">Einstellungen</a></li>
 		</ul>
 	</div>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 text-center">
-				<div class="navbar navbar-default navbar-fixed-top">
-					<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<h1 class="window-title text-center">Success</h1>
-				</div>
-			</div>
-		</div>
-	</div>
 
+	<div class="navbar navbar-default navbar-fixed-top">
+		<button type="button" class="navbar-toggle pull-left" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
+
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div class="pull-left icon-cont"><img src="img/logo.png" alt="Logo icon" class="logo-icon" /> </div>
+		<h1 class="window-title">SUCCESS</h1>
+		<button class="home-btn pull-right" onclick="window.open('ntermin.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+	</div>
 
 	<div class="container-fluid">
 		<div class="row">
@@ -95,7 +89,7 @@
 									<div class="progress-bar"></div>
 								</div>
 								<a href="#" class="bs-wizard-dot"></a>
-								<div class="bs-wizard-info text-center">Migräne</div>
+								<div class="bs-wizard-info text-center"><div class="behandlung"></div></div>
 							</div>
 
 							<div class="col-xs-3 bs-wizard-step active">
@@ -105,9 +99,9 @@
 									<div class="progress-bar"></div>
 								</div>
 								<a href="#" class="bs-wizard-dot"></a>
-								<div class="bs-wizard-info text-center">21 FEB</div>
+								<div class="bs-wizard-info text-center"><div class="date-post"></div>
 							</div>
-
+							</div>
 							<div class="col-xs-3 bs-wizard-step complete">
 								<!-- active -->
 								<div class="text-center bs-wizard-stepnum">-</div>
@@ -129,7 +123,7 @@
 						<p>Ihr Termin wurde erfolgreich übermittelt</p>
 					</div>
 					<div class="col-xs-12 text-center">
-						<img src="img/succes.png" alt="Success" class="success-img" />
+						<img src="img/succes.png" alt="Success" class="success-img" onclick="window.open('ntermin.html?namepost=' + $('.behandlung').text(), '_self', 'location=yes');" />
 					</div>
 				</div>
 			</div>
@@ -144,13 +138,38 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script>
 		window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
 	</script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jasny-bootstrap.min.js"></script>
 	<script src="js/html5shiv.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			var namepost = getParameterByName('namepost');
+			if (namepost != null){
+				$(".behandlung").text(namepost);
+			}
+			var postdate = getParameterByName('postdate');
+			if (postdate != null){
+				$(".date-post").text(postdate);
+			}
+
+		});
+
+		function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			url = url.toLowerCase(); // This is just to avoid case sensitiveness  
+			name = name.replace(/[\[\]]/g, "\\$&");
+			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
+	</script>
 </body>
 
 </html>

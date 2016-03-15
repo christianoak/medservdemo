@@ -49,7 +49,11 @@ a:hover {
 .navbar-default .navbar-toggle:hover {
 	background: none;
 }
-.navmenu-default .navmenu-nav>li>a:hover, .navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover, .navmenu-default .navmenu-nav>li>a:focus, .navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus {
+
+.navmenu-default .navmenu-nav>li>a:hover,
+.navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover,
+.navmenu-default .navmenu-nav>li>a:focus,
+.navbar-default .navbar-offcanvas .navmenu-nav>li>a:focus {
 	color: #fff;
 }
 
@@ -60,7 +64,8 @@ a:hover {
 }
 
 .avatar-ph {
-	background-color: white;
+	background: url(../img/avr.jpg) center no-repeat;
+	background-size: cover;
 	border-radius: 50%;
 	display: table-cell;
 	height: 75px;
@@ -72,6 +77,9 @@ a:hover {
 	display: table-cell;
 	padding-left: 20px;
 }
+.nav>li>a {
+		font-size: 16px;
+	}
 
 .sign-up {
 	background: none;
@@ -100,20 +108,32 @@ a:hover {
 	text-transform: uppercase;
 	width: 50%;
 }
-
+.icon-cont {
+	height: 50px;
+	line-height: 50px;
+	margin-right: 10px;
+	padding: 0;
+}
+.logo-icon {
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+}
 .window-title {
 	color: white;
-	display: inline;
+	display: inline-block;
 	font-family: "Helvetica", sans-serif;
-	font-size: 27px;
+	font-size: 24px;
 	font-style: italic;
 	line-height: 50px;
+	text-align: left;
 }
 
 .sign-up,
 .glyphicon,
-.glyphicon-remove {
-	color: #283437;
+.glyphicon-home {
+	color: #fff;
+	line-height: 40px;
 }
 
 .form-control {
@@ -232,13 +252,14 @@ input.cmn-toggle-round-flat + label::before {
 }
 
 .img-button {
-	max-width: 100%;
+	max-width: 200px;
+	max-height: 200px;
 }
 
 .ntermin {
 	color: #283437;
 	background: rgba(255, 255, 255, 0.4);
-	margin-top: 50px;
+	margin-top: 20%;
 }
 
 .ntermin h1 {
@@ -304,7 +325,6 @@ input.cmn-toggle-round-flat + label::before {
 	position: relative;
 }
 
-.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
 
 .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
 	color: #595959;
@@ -456,6 +476,7 @@ input.cmn-toggle-round-flat + label::before {
 	width: 100%;
 	height: 100%;
 }
+
 .modal-list {
 	margin-left: 20px;
 }
@@ -488,7 +509,10 @@ input.cmn-toggle-round-flat + label::before {
 }
 
 .nav-btn {
-	margin-top: 50px;
+	position: fixed;
+	Width: 100%;
+	bottom: 0;
+	margin-bottom: 10px;
 }
 
 .schedule-tab {
@@ -523,10 +547,13 @@ input.cmn-toggle-round-flat + label::before {
 
 .success-img {
 	margin-top: 100px;
+	max-width: 200px;
+	max-height: 200px;
 }
 
 .avatar-ph-mid {
-	background-color: white;
+	background: url(../img/avr.jpg) center no-repeat;
+	background-size: cover;
 	border-radius: 50%;
 	display: block;
 	height: 75px;
@@ -537,19 +564,46 @@ input.cmn-toggle-round-flat + label::before {
 	width: 75px;
 }
 
+.home-btn {
+	background: none;
+	border: 0;
+}
+
+.im-center {
+	display: block;
+	margin: 0 auto;
+}
+.btn-nstyle {
+	background: none;
+	border: 0;
+}
+.date-post {
+	color: #e53935;
+	display: inline-block;
+	font-weight: bold;
+}
+.s-dat {
+	display: inline-block;
+}
+.behandlung {
+	color: #e53935;
+	display: inline-block;
+	font-weight: bold;
+}
+.hr {
+	color: #e53935;
+	display: inline-block;
+	font-weight: bold;
+}
 @media only screen and (max-width: 480px) {
 	body {
 		font-size: 16px;
 	}
 	/* TOP BAR */
-	.navbar,
-	.navbar-default,
-	.navbar-fixed-top {
-		height: 25px;
-		line-height: 25px;
-	}
+
 	.window-title {
 		font-size: 20px;
+		line-height: 50px;
 	}
 	/* MENU */
 	.nav>li>a {
@@ -635,6 +689,9 @@ input.cmn-toggle-round-flat + label::before {
 	.btn-choice > img {
 		height: 35px;
 	}
+	.mt-top {
+		margin-top: 50px;
+	}
 	/* NTERMIN 3 */
 	.btn-l {
 		font-size: 12px;
@@ -658,6 +715,9 @@ input.cmn-toggle-round-flat + label::before {
 	}
 	.nav-btn {
 		margin-top: 5px;
+		position: fixed;
+	Width: 100%;
+	bottom: 0;
 	}
 	.round-btn {
 		width: 40px;

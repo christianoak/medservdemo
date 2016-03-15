@@ -13,10 +13,9 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
+
+	<!-- Custom styles -->
 	<link href="css/font-awesome/font-awesome.css" rel="stylesheet">
 	<link href="css/base.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
@@ -63,7 +62,9 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<h1 class="window-title text-center">NEUER TERMIN</h1>
+		<div class="pull-left icon-cont"><img src="img/logo.png" alt="Logo icon" class="logo-icon" /> </div>
+		<h1 class="window-title">NEUER TERMIN</h1>
+		<button class="home-btn pull-right" onclick="window.open('ntermin.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
 	</div>
 
 	<div class="container-fluid">
@@ -80,14 +81,16 @@
 							<div class="bs-wizard-info text-center">HAUSARZT</div>
 						</div>
 
-						<div class="col-xs-3 bs-wizard-step disabled">
+						<div class="col-xs-3 bs-wizard-step complete">
 							<!-- complete -->
-							<div class="text-center bs-wizard-stepnum">-</div>
+							<div class="text-center bs-wizard-stepnum">BEHANDLUNG</div>
 							<div class="progress">
 								<div class="progress-bar"></div>
 							</div>
 							<a href="#" class="bs-wizard-dot"></a>
-							<div class="bs-wizard-info text-center">-</div>
+							<div class="bs-wizard-info text-center">
+								<div class="behandlung"></div>
+							</div>
 						</div>
 
 						<div class="col-xs-3 bs-wizard-step disabled">
@@ -129,6 +132,12 @@
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-xs-12 nav-btn">
+				<button class="round-btn pull-left" onclick="window.open('ntermin2.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
+				<button class="round-btn pull-right" onclick="window.open('calendar.html?namepost=' + $('.behandlung').text(), '_self', 'location=yes');"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+			</div>
+		</div>
 		<!-- Modal -->
 		<div id="rezept" class="modal fade" role="dialog">
 			<div class="modal-dialog">
@@ -143,6 +152,7 @@
 						<textarea rows="10"></textarea>
 					</div>
 					<div class="modal-footer">
+						<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Submit</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 				</div>
@@ -161,21 +171,31 @@
 					</div>
 					<div class="modal-body">
 						<ul class="modal-list">
-							<li>Erkältung</li>
-							<li>Übelkeit &amp; Erbrechen</li>
-							<li><a onclick="window.open('calendar.html', '_self', 'location=yes');">Migräne</a></li>
-							<li>Verletzung</li>
-							<li>Schnittwunde</li>
-							<li>Fieber</li>
+							<li>
+								<button class="erkaltung btn-nstyle">Erkältung</button>
+							</li>
+							<li>
+								<button class="ubelkeit btn-nstyle">Übelkeit &amp; Erbrechen </button>
+							</li>
+							<li>
+								<button class="migrane btn-nstyle">Migräne</button>
+							</li>
+							<li>
+								<button class="verletzung btn-nstyle">Verletzung</button>
+							</li>
+							<li>
+								<button class="schnittwunde btn-nstyle">Schnittwunde</button>
+							</li>
+							<li>
+								<button class="fieber btn-nstyle">Fieber</button>
+							</li>
 						</ul>
 					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					</div>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
 				</div>
-
 			</div>
 		</div>
+	</div>
 	</div>
 	<!-- /.container -->
 
@@ -183,13 +203,34 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script>
 		window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
 	</script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jasny-bootstrap.min.js"></script>
 	<script src="js/html5shiv.min.js"></script>
+	<!-- MODAL BUTTONS -->
+	<script>
+		$(".migrane").click(function () {
+			$(".behandlung").text("Migrane");
+		});
+		$(".erkaltung").click(function () {
+			$(".behandlung").text("Erkältung");
+		});
+		$(".ubelkeit").click(function () {
+			$(".behandlung").text("Übelkeit und Erbrechen");
+		});
+		$(".verletzung").click(function () {
+			$(".behandlung").text("Verletzung");
+		});
+		$(".schnittwunde").click(function () {
+			$(".behandlung").text("Schnittwunde");
+		});
+		$(".fieber").click(function () {
+			$(".behandlung").text("Fieber");
+		});
+	</script>
 </body>
 
 </html>

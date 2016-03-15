@@ -22,7 +22,6 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/jasny-bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="css/page.css" rel="stylesheet">
-	<link href="css/responsive-calendar.css" rel="stylesheet">
 
 
 </head>
@@ -30,11 +29,14 @@
 <body>
 
 
-<div class="container-fluid">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12 text-center">
 				<div class="navbar navbar-default navbar-fixed-top">
-					<h1 class="window-title text-center">SCHEDULE</h1>
+					<div class="pull-left icon-cont"><img src="img/logo.png" alt="Logo icon" class="logo-icon" /> </div>
+					<h1 class="window-title">SCHEDULE</h1>
+					<button class="home-btn pull-right" onclick="window.open('index.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+
 				</div>
 			</div>
 		</div>
@@ -61,7 +63,7 @@
 								<div class="progress-bar"></div>
 							</div>
 							<a href="#" class="bs-wizard-dot"></a>
-							<div class="bs-wizard-info text-center">Migräne</div>
+							<div class="bs-wizard-info text-center"><div class="behandlung"></div></div>
 						</div>
 
 						<div class="col-xs-3 bs-wizard-step active">
@@ -71,7 +73,7 @@
 								<div class="progress-bar"></div>
 							</div>
 							<a href="#" class="bs-wizard-dot"></a>
-							<div class="bs-wizard-info text-center">21 FEB</div>
+							<div class="bs-wizard-info text-center"><div class="date-post"></div></div>
 						</div>
 
 						<div class="col-xs-3 bs-wizard-step disabled">
@@ -186,7 +188,7 @@
 				<div class="row">
 					<div class="col-xs-12 nav-btn">
 						<button class="round-btn pull-left" onclick="window.open('calendar.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
-						<button class="round-btn pull-right" onclick="window.open('sumar.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+						<button class="round-btn pull-right" onclick="window.open('sumar.html?namepost=' + $('.behandlung').text() + '&postdate=' + $('.date-post').text(), '_self', 'location=yes');"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
 					</div>
 				</div>
 
@@ -199,34 +201,38 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script>
 		window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
 	</script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jasny-bootstrap.min.js"></script>
 	<script src="js/html5shiv.min.js"></script>
-	<script src="js/responsive-calendar.js"></script>
-	<script type="text/javascript">
+	</script>
+	<script>
 		$(document).ready(function () {
-			$(".responsive-calendar").responsiveCalendar({
-				time: '2016-03',
-				events: {
-					"2013-04-30": {
-						"number": 5,
-						"url": "http://w3widgets.com/responsive-slider"
-					},
-					"2013-04-26": {
-						"number": 1,
-						"url": "http://w3widgets.com"
-					},
-					"2013-05-03": {
-						"number": 1
-					},
-					"2013-06-12": {}
-				}
-			});
+	
+			var namepost = getParameterByName('namepost');
+			if (namepost != null)
+			$(".behandlung").text(namepost);
+			
+			var postdate = getParameterByName('postdate');
+			if (postdate != null)
+			$(".date-post").text(postdate);
+			
+
 		});
+		
+		function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			url = url.toLowerCase(); // This is just to avoid case sensitiveness  
+			name = name.replace(/[\[\]]/g, "\\$&");
+			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
 	</script>
 </body>
 
