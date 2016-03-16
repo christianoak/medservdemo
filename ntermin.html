@@ -62,7 +62,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<div class="pull-left icon-cont"><img src="img/logo.png" alt="Logo icon" class="logo-icon"/> </div>
+		<div class="pull-left icon-cont"><img src="img/logo.png" alt="Logo icon" class="logo-icon" /> </div>
 		<h1 class="window-title">NEUER TERMIN</h1>
 		<button class="home-btn pull-right" onclick="window.open('index.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
 	</div>
@@ -80,15 +80,15 @@
 				<table class="ntermint">
 					<tr>
 						<td class="op">Datum:</td>
-						<td class="opval">21 FEB</td>
+						<td class="opval date-post"></td>
 					</tr>
 					<tr>
 						<td class="op">Uhr:</td>
-						<td class="opval">9:00</td>
+						<td class="opval time-hr"></td>
 					</tr>
 					<tr>
 						<td class="op">Hausarzt:</td>
-						<td class="opval">Behandlung - Migräne</td>
+						<td class="opval behandlung"></td>
 					</tr>
 				</table>
 			</div>
@@ -111,6 +111,37 @@
 	</script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jasny-bootstrap.min.js"></script>
+	<script src="js/html5shiv.min.js"></script>
+	<script>
+		var hrpost;
+		$(document).ready(function () {
+
+
+			var namepost = getParameterByName('namepost');
+			if (namepost != null) {
+				$(".behandlung").text(namepost);
+			}
+			var postdate = getParameterByName('postdate');
+			if (postdate != null) {
+				$(".date-post").text(postdate);
+			}
+			var hrpost = getParameterByName('hrpost');
+			if (hrpost != null) {
+				$(".time-hr").text(hrpost);
+			}
+		});
+
+		function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			url = url.toLowerCase(); // This is just to avoid case sensitiveness  
+			name = name.replace(/[\[\]]/g, "\\$&");
+			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
+	</script>
 </body>
 
 </html>

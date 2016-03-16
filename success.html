@@ -89,7 +89,9 @@
 									<div class="progress-bar"></div>
 								</div>
 								<a href="#" class="bs-wizard-dot"></a>
-								<div class="bs-wizard-info text-center"><div class="behandlung"></div></div>
+								<div class="bs-wizard-info text-center">
+									<div class="behandlung main"></div>
+								</div>
 							</div>
 
 							<div class="col-xs-3 bs-wizard-step active">
@@ -99,8 +101,9 @@
 									<div class="progress-bar"></div>
 								</div>
 								<a href="#" class="bs-wizard-dot"></a>
-								<div class="bs-wizard-info text-center"><div class="date-post"></div>
-							</div>
+								<div class="bs-wizard-info text-center">
+									<div class="date-post main"></div>
+								</div>
 							</div>
 							<div class="col-xs-3 bs-wizard-step complete">
 								<!-- active -->
@@ -122,13 +125,14 @@
 					<div class="col-xs-12 text-center">
 						<p>Ihr Termin wurde erfolgreich übermittelt</p>
 					</div>
+					<div class="time-hr hidden"></div>
 					<div class="col-xs-12 text-center">
-						<img src="img/succes.png" alt="Success" class="success-img" onclick="window.open('ntermin.html?namepost=' + $('.behandlung').text(), '_self', 'location=yes');" />
+						<img src="img/succes.png" alt="Success" class="success-img" onclick="window.open('ntermin.html?namepost=' + $('.behandlung').text() + '&postdate=' + $('.date-post').text() + '&hrpost='+$('.time-hr').text(), '_self', 'location=yes');" />
 					</div>
+
 				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 
 	</div>
@@ -145,18 +149,22 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jasny-bootstrap.min.js"></script>
 	<script src="js/html5shiv.min.js"></script>
+	</script>
 	<script>
 		$(document).ready(function () {
 
 			var namepost = getParameterByName('namepost');
-			if (namepost != null){
+			if (namepost != null) {
 				$(".behandlung").text(namepost);
 			}
 			var postdate = getParameterByName('postdate');
-			if (postdate != null){
+			if (postdate != null) {
 				$(".date-post").text(postdate);
 			}
-
+			var hrpost = getParameterByName('hrpost');
+			if (hrpost != null) {
+				$(".time-hr").text(hrpost);
+			}
 		});
 
 		function getParameterByName(name, url) {

@@ -590,10 +590,16 @@ input.cmn-toggle-round-flat + label::before {
 	display: inline-block;
 	font-weight: bold;
 }
-.hr {
+.time-hr {
 	color: #e53935;
 	display: inline-block;
 	font-weight: bold;
+}
+.hidden {
+	display: none;
+}
+.cnone {
+	color: #283437;
 }
 @media only screen and (max-width: 480px) {
 	body {

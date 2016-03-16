@@ -102,7 +102,8 @@
 							<div class="s-dat"><strong>Datum:</strong></div>
 							<div class="date-post"></div>
 							<br> 
-							<div class="s-dat"><strong>Uhr: </strong></div><div class="hr">9:00</div> 
+							<div class="s-dat"><strong>Uhr: </strong></div>
+							<div class="time-hr"></div>
 							<br>
 							<div class="s-dat"><strong>Behandlung</strong> - </div>
 							<div class="behandlung"></div>
@@ -111,8 +112,8 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12 nav-btn">
-						<button class="round-btn pull-left" onclick="window.open('calendar.html', '_self', 'location=yes');"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
-						<button class="round-btn pull-right" onclick="window.open('success.html?namepost=' + $('.behandlung.main').text() + '&postdate=' + $('.date-post.main').text(), '_self', 'location=yes');"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+						<button class="round-btn pull-left" onclick="window.open('schedule.html?namepost=' + $('.behandlung.main').text() + '&postdate=' + $('.date-post.main').text() + '&hrpost=' + $('.time-hr').text(), '_self', 'location=yes');"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
+						<button class="round-btn pull-right" onclick="window.open('success.html?namepost=' + $('.behandlung.main').text() + '&postdate=' + $('.date-post.main').text() + '&hrpost=' + $('.time-hr').text(), '_self', 'location=yes');"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
 					</div>
 					<div class="separator"></div>
 				</div>
@@ -136,14 +137,20 @@
 	</script>
 	<script>
 		$(document).ready(function () {		
-				
-			
+		
 			var namepost = getParameterByName('namepost');
-			if (namepost != null)
+			if (namepost != null){
 				$(".behandlung").text(namepost);
+			}
 			var postdate = getParameterByName('postdate');
-			if (postdate != null)
+			if (postdate != null){
 				$(".date-post").text(postdate);
+			}
+			var hrpost = getParameterByName('hrpost');
+			if (hrpost != null){
+				$(".time-hr").text(hrpost);
+			}
+				//$(".time-hr").text();
 
 		});
 

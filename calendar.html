@@ -168,14 +168,17 @@
 				onDayClick: function (events) {
 					postdate = $(this).attr("data-day") + "/" + $(this).attr("data-month");
 				}
-				
 
 			});
 			var namepost = getParameterByName('namepost');
-			if (namepost != null)
+			if (namepost != null) {
 				$(".behandlung").text(namepost);
+			}
+			var hrpost = getParameterByName('hrpost');
+			if (hrpost != null) {
+				$(".time-hr").text(hrpost);
+			}
 
-			
 		});
 
 		function getParameterByName(name, url) {
@@ -188,7 +191,6 @@
 			if (!results[2]) return '';
 			return decodeURIComponent(results[2].replace(/\+/g, " "));
 		}
-		
 	</script>
 
 </body>
