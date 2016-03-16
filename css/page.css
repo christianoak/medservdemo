@@ -77,9 +77,10 @@ a:hover {
 	display: table-cell;
 	padding-left: 20px;
 }
+
 .nav>li>a {
-		font-size: 16px;
-	}
+	font-size: 16px;
+}
 
 .sign-up {
 	background: none;
@@ -108,17 +109,20 @@ a:hover {
 	text-transform: uppercase;
 	width: 50%;
 }
+
 .icon-cont {
 	height: 50px;
 	line-height: 50px;
 	margin-right: 10px;
 	padding: 0;
 }
+
 .logo-icon {
 	height: 30px;
 	width: 30px;
 	vertical-align: middle;
 }
+
 .window-title {
 	color: white;
 	display: inline-block;
@@ -324,7 +328,6 @@ input.cmn-toggle-round-flat + label::before {
 	padding: 0;
 	position: relative;
 }
-
 
 .bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
 	color: #595959;
@@ -573,40 +576,54 @@ input.cmn-toggle-round-flat + label::before {
 	display: block;
 	margin: 0 auto;
 }
+
 .btn-nstyle {
 	background: none;
 	border: 0;
 }
+
 .date-post {
 	color: #e53935;
 	display: inline-block;
 	font-weight: bold;
 }
+
 .s-dat {
 	display: inline-block;
 }
+
 .behandlung {
 	color: #e53935;
 	display: inline-block;
 	font-weight: bold;
 }
+
 .time-hr {
 	color: #e53935;
 	display: inline-block;
 	font-weight: bold;
 }
+
 .hidden {
 	display: none;
 }
+
 .cnone {
 	color: #283437;
+}
+.cnone:focus {
+	color: #e53935;
+	text-decoration: none;
+}
+.cnonefocus {
+	color: #e53935;
+	text-decoration: none;
 }
 @media only screen and (max-width: 480px) {
 	body {
 		font-size: 16px;
 	}
 	/* TOP BAR */
-
 	.window-title {
 		font-size: 20px;
 		line-height: 50px;
@@ -722,8 +739,8 @@ input.cmn-toggle-round-flat + label::before {
 	.nav-btn {
 		margin-top: 5px;
 		position: fixed;
-	Width: 100%;
-	bottom: 0;
+		Width: 100%;
+		bottom: 0;
 	}
 	.round-btn {
 		width: 40px;
